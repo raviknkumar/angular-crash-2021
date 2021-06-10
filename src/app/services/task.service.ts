@@ -15,6 +15,7 @@ const httpOptions = {
 export class TaskService {
   private apiUrl = 'http://localhost:5000/tasks';
 
+  // Dependency Injection
   constructor(private http: HttpClient) {}
 
   getTasks(): Observable<Task[]> {

@@ -13,6 +13,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MynewoneComponent } from './components/mynewone/mynewone.component';
 
 const appRoutes: Routes = [
   { path: '', component: TasksComponent },
@@ -29,13 +30,14 @@ const appRoutes: Routes = [
     AddTaskComponent,
     AboutComponent,
     FooterComponent,
+    MynewoneComponent,
   ],
   imports: [
-    BrowserModule,
-    FontAwesomeModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    BrowserModule, // DOM Handling, this is from angular
+    FontAwesomeModule, // external dependency injected for icons
+    HttpClientModule, // this is from angular
+    FormsModule, // this is from angular
+    RouterModule.forRoot(appRoutes, { enableTracing: true }), // this is from angular
   ],
   providers: [],
   bootstrap: [AppComponent],
